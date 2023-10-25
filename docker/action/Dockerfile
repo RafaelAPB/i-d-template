@@ -81,7 +81,7 @@ RUN set -e; \
     set -x; \
     tool_install idnits bfda9518d5b4e8a682f2e6f34a449c2d3ea74539 \
       0ea07cdc982645a85622ccc2636a4d21cde54137269f0e8a204e1bc519b48818; \
-    mmark="2.2.10"; \
+    mmark="2.2.15"; \
     install mmark \
       "https://github.com/mmarkdown/mmark/releases/download/v${mmark}/mmark_${mmark}_linux_amd64.tgz" \
       54ce59da52c59bcc810132ef395f523beeb46bdf9df9b1e3f9be882860934cff; \

@@ -37,7 +37,7 @@ jobs:
           label=test
         fi
         tag() {
-          echo "${1}/martinthomson/i-d-template${2}:${label}"
+          echo "${1}/rafaelapb/i-d-template${2}:${label}"
         }
         if [ "$label" = "test" ]; then
           registry=localhost:5000
@@ -66,8 +66,8 @@ jobs:
       uses: docker/login-action@v2
       with:
         registry: ghcr.io
-        username: ${{ secrets.GHCR_USERNAME }}
-        password: ${{ secrets.GHCR_PASSWORD }}
+        username: ${{ github.repository_owner }}
+        password: ${{ secrets.GITHUB_TOKEN }}
 
     - name: "Build and Publish GitHub Actions Image"
       uses: docker/build-push-action@v3
